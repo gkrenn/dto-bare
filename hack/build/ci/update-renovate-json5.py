@@ -10,6 +10,7 @@ versions = ['$default']
 with open(versionFile, 'r') as f:
     versions += f.readlines()
     versions = [x.strip() for x in versions]
+    versions = [x.replace('origin/', '') for x in versions]
 
 # read renovate file to dict and update
 with open(renovateFile, 'r') as f:
