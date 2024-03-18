@@ -1,0 +1,7 @@
+resources:
+- bases
+#+kubebuilder:scaffold:crdkustomizeresource
+
+patchesStrategicMerge:
+- patches/webhook_in_dynakubes.yaml
+#+kubebuilder:scaffold:crdkustomizewebhookpatch
